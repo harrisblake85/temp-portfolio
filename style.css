@@ -1,6 +1,6 @@
 .projects{
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   display: inline-flex;
   flex-wrap: wrap;
 }
