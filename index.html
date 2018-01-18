@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="PortfolioApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Temp Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller="MainController as ctrl">
+
+    <h1 class="mainh1"><strong>Projects By Blake Harris</strong></h1>
+    <div class="projects">
+
+    <div ng-repeat="project in ctrl.projects" class="project">
+      <h1 class="projecth1">{{project.name}}</h1>
+      <h2><strong>Roles: </strong>{{project.roles}}</h2>
+      <a href="{{ctrl.live_link}}">
+      <img ng-src="{{project.img}}">
+      </a>
+      <h2>{{project.desc}}</h2>
+      <h2>Techs Used:</h2>
+      <div ng-repeat="tech in project.technologies" class="techs">
+        {{tech}},
+      </div>
+      <a href="{{project.live_link}}">
+        <h3>Live Site</h3>
+      </a>
+
+      <a href="{{project.live_repo}}">
+        <h3>Project GitHub</h3>
+      </a>
+      <!-- Backend -->
+      <div ng-if="project.sep_backend"class="backend_links">
+        <a href="{{project.backend_link}}">
+          <h3>Live Backend</h3>
+        </a>
+        <a href="{{project.backend_repo}}">
+          <h3>Backend GitHub</h3>
+        </a>
+      </div>
+    </div>
+    <!-- projects -->
+</div>
+    <!-- end body -->
+  </body>
+</html>

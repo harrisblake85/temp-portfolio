@@ -1,0 +1,31 @@
+.projects{
+  width: 100%;
+  justify-content: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.project{
+  width: 25em;
+  border: 16px solid black;
+  border-radius: 16px;
+}
+.project img{
+  width: 400px;
+  height:300px;
+  border: 4px solid #4d4e4f;
+  box-sizing: border-box;
+}
+body{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f8ff;
+}
+.mainh1{
+  padding: .5em;
+  background-color: #36454f;
+  color: white;
+}
+.projecth1{
+
+}
